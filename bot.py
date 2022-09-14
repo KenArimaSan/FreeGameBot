@@ -73,7 +73,7 @@ def get_current_game(update, context):
     bot = context.bot
     chat_id = update.effective_chat.id
     if last_game[0] == "":
-        get_new_game('')
+        get_new_game(context)
     bot.send_message(chat_id, last_game[0] + "\n" + last_game[1])
 
 def subscribe(update, context):
